@@ -19,7 +19,6 @@
     h1 { font-size: 1.75rem; }
     h2 { font-size: 1.1rem; margin-top: 1.75rem; }
     ul { padding-left: 1.25rem; }
-    code { font-size: 0.9em; background: #14141c; padding: 0.1em 0.35em; border-radius: 4px; }
     .card {
       background: #14141c;
       border: 1px solid #2a2a36;
@@ -27,14 +26,25 @@
       padding: 1rem 1.25rem;
       margin: 1rem 0;
     }
+    .legal-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.25rem;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #2a2a36;
+    }
+    .legal-nav a { color: #8a8678; }
+    .legal-nav a:hover { color: #e8e4dc; }
   </style>
 </head>
 <body>
-  <nav class="legal-nav" aria-label="Legal" style="display:flex;flex-wrap:wrap;gap:0.5rem 1.25rem;font-size:0.9rem;margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid #2a2a36;">
-    <a href="index.html" style="color:#8a8678;">Meridian</a>
-    <a href="privacy.html" style="color:#8a8678;">Privacy Policy</a>
-    <a href="terms.html" style="color:#8a8678;">Terms of Service</a>
-    <a href="support.html" style="color:#e8e4dc;"><strong>Support</strong></a>
+  <nav class="legal-nav" aria-label="Legal">
+    <a href="index.html">Meridian</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="support.html"><strong>Support</strong></a>
   </nav>
 
   <h1>Meridian Support</h1>
@@ -42,42 +52,20 @@
 
   <div class="card">
     <p><strong>Report a bug or ask a question</strong></p>
-    <p><a href="https://github.com/maxhum-sudo/Meridian/issues">Open a GitHub Issue</a> — include iOS version, Meridian version (Settings → About), and steps to reproduce. Avoid posting habit names or other personal content in public issues when possible.</p>
+    <p><a href="https://github.com/maxhum-sudo/Meridian/issues">Open a GitHub Issue</a> — include iOS version, Meridian version (Settings → About), and steps to reproduce.</p>
   </div>
-
-  <h2>Accounts and cloud backup</h2>
-  <p>Accounts are <strong>optional</strong>. You can use Meridian without signing in; habits stay on your device only.</p>
-  <ul>
-    <li><strong>Sign in</strong> — Settings → Account → Sign in with Apple or Sign in with Google. Apple and Google buttons have equal prominence.</li>
-    <li><strong>What syncs</strong> — habits, completion history, and selected settings (week start, haptics). Widgets always read on-device data; the app syncs to the cloud in the background.</li>
-    <li><strong>First sign-in</strong> — if you already have local habits, Meridian asks whether to upload them to your account. You can decline and keep cloud empty until you add new data.</li>
-    <li><strong>New phone</strong> — install Meridian, sign in with the same Apple or Google account, and wait for sync to finish (requires network). Habits should appear after the first successful pull.</li>
-    <li><strong>Offline</strong> — logging and widgets still work offline. Changes save locally and sync when you are back online.</li>
-    <li><strong>Sign out</strong> — Settings → Account → Sign out. Local habits remain on the device; cloud session is cleared.</li>
-    <li><strong>Delete account</strong> — Settings → Account → Delete account (two-step confirmation). Removes cloud backup and your account. You can choose to keep or delete local habits on the device.</li>
-  </ul>
-
-  <h2>Sync troubleshooting</h2>
-  <ul>
-    <li><strong>“Offline — changes saved locally”</strong> — expected without network. Sync resumes when connectivity returns.</li>
-    <li><strong>“Session expired”</strong> — sign in again with the same provider (Apple or Google).</li>
-    <li><strong>Data mismatch across devices</strong> — open Meridian on each device while online and leave the app in the foreground briefly. Last update wins for each habit.</li>
-    <li><strong>Widget out of date after sync</strong> — open the app once; widgets refresh from the on-device snapshot after sync merges.</li>
-  </ul>
 
   <h2>Quick answers</h2>
   <ul>
     <li><strong>Widgets show no habits?</strong> Open Meridian and add at least one habit, then add the widget from the iOS Home Screen or Lock Screen widget gallery.</li>
     <li><strong>Widget tap doesn’t update?</strong> Ensure the widget is a Meridian interactive widget (tap the metaphor to log a rep). Reload widgets after large data changes.</li>
     <li><strong>Weekly habits</strong> — week boundaries follow Settings → Week starts on (locale, Sunday, or Monday).</li>
-    <li><strong>Data without an account</strong> — habits stay on your device only. See our <a href="privacy.html">Privacy Policy</a>.</li>
-    <li><strong>Data with an account</strong> — synced habits are stored on Supabase-hosted infrastructure. See <a href="privacy.html">Privacy Policy</a> → Accounts and cloud sync.</li>
-    <li><strong>After an app update</strong> — if habits disappear locally, Meridian may have moved your old database to a <code>StoreBackups/</code> folder on device. If you use an account, sign in and sync after checking local recovery. Contact us via GitHub Issues if you need help.</li>
+    <li><strong>Data location</strong> — all habits stay on your device. See our <a href="privacy.html">Privacy Policy</a>.</li>
+    <li><strong>After an app update</strong> — if habits disappear, Meridian may have moved your old database to a <code>StoreBackups/</code> folder on device; contact us via GitHub Issues for recovery help.</li>
   </ul>
 
-  <h2>Legal</h2>
-  <p><a href="privacy.html">Privacy Policy</a> — local-first design, optional Supabase cloud backup, no analytics SDKs.</p>
-  <p><a href="terms.html">Terms of Service</a> — license, accounts, cloud sync, and disclaimers.</p>
+  <h2>Privacy</h2>
+  <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a> — Meridian does not collect or transmit your habit data.</p>
 
   <p><a href="index.html">← Meridian docs</a></p>
 </body>
